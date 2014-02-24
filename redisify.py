@@ -66,6 +66,7 @@ def redisify(default=None, db=0):
             OPTIONS=dict(
                 PARSER_CLASS='redis.connection.HiredisParser',
                 PASSWORD=url['PASSWORD'],
+                CLIENT_CLASS="redis_cache.client.DefaultClient",
             )
         )
 
